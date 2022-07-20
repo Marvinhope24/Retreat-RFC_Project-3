@@ -62,9 +62,12 @@
 		<div class = "center">
 		<br>
         <center>Registration</center><br>
-        <form action="#">
+        <form name="registration" method="POST" netlify honeypot="bot field" data-netlify="true">
 		
             <center class="form first">
+				<p hidden aria-hidden="true">
+					<label>Don't fill out this form. <input name="bot-filed"/></label>
+				</p>
                     <label for="fname">First name:</label >
 					<input type="text" id="fname" name="fname" placeholder="First name" required><br><br>
 					
@@ -101,16 +104,13 @@
 					<div class="container">
 		<div class = "center">
         <center>Permission </center><br>
-        <form action="#">
-		
-					<form action="/action_page.php">
+
 			  <input type="checkbox" id="permission" name="permission" value="permission" required>
 			  <label for="permission"> I parent/guardian allow Retreat RFC to train my child </label><br><br>
 					
 		<div class="container">
 		<div class = "center">
         <center>Physical Address</center><br>
-        <form action="#">
 
 					<label for="building">Building:</label>
 					<input type="text" id="building" name="building" placeholder="Building Name" required><br><br>
@@ -128,14 +128,14 @@
 					<input type="text" id="postalcode" name="postalcode" placeholder="Postal Code" required><br><br>
 					
 					<label for="province">Province:</label>
-					<input type="text" id="work" name="province" placeholder="Province" required><br><br>
+					<input type="text" id="province" name="province" placeholder="Province" required><br><br>
 
                         <button class="signup">
                             <span class="btnText">Sign-up</span>
                             <i class="uil uil-navigator"></i>
                         </button>
 						<br><br>
-						
+
                     </div>
                 </div> 
             </div>
@@ -171,8 +171,6 @@
 					</br>
 					Ethical Policy		
 				</div>
-				
-			
 		</div>
 	<!-- Footer End -->
 
