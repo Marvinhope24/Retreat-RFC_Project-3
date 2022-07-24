@@ -17,7 +17,44 @@
 			width: 300px;
 			display:inline-block;
 		}
+		 h1 {text-align: center;}
+		 h2 {text-align: center;}
+		 h3 {text-align: center;}
 		</style>
+
+	<script>
+	function Selectage() {
+		var ageGroup = document.getElementById("age");
+		if(ageGroup.value == "seniors") {
+			document.getElementById("school").style.visibility="hidden";
+			document.getElementById("school1").style.visibility="hidden";
+			document.getElementById("grade").style.visibility="hidden";
+			document.getElementById("grade1").style.visibility="hidden";
+
+		}
+		else {
+			document.getElementById("school").style.visibility="visible";
+			document.getElementById("school1").style.visibility="visible";
+			document.getElementById("grade").style.visibility="visible";
+			document.getElementById("grade1").style.visibility="visible";
+		}
+		if(ageGroup.value == "under11" ||ageGroup.value == "under14") {
+			document.getElementById("work").style.visibility="hidden";
+			document.getElementById("work1").style.visibility="hidden";
+		}
+		else {
+			document.getElementById("work").style.visibility = "visible";
+			document.getElementById("work1").style.visibility="visible";
+
+		}if(ageGroup.value == "under19" || ageGroup.value == "seniors" ) {
+			document.getElementById("permission").style.visibility="hidden";
+			document.getElementById("permission1").style.visibility="hidden";
+		}else {
+			document.getElementById("permission").style.visibility="visible";
+			document.getElementById("permission1").style.visibility="visible";
+		}
+	}
+		</script>
 </head>
 
 <body>
@@ -54,14 +91,13 @@
     <!----===== Iconscout CSS ===== -->
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
 
-    <title>Responsive Regisration Form </title> 
+    <title>Responsive Registration Form </title>
 </head>
 
 <body>
     <div class="container">
 		<div class = "center">
-		<br>
-        <center>Registration</center><br>
+			<h1>Registration </h1>
         <form name="registration" method="POST" netlify honeypot="bot field" data-netlify="true">
 		
             <center class="form first">
@@ -69,25 +105,29 @@
 					<label>Don't fill out this form. <input name="bot-filed"/></label>
 				</p>
                     <label for="fname">First name:</label >
-					<input type="text" id="fname" name="fname" placeholder="First name" required><br><br>
-					
+					<input type="text" id="fname" name="fname" placeholder="First Name" required><br><br>
+
 					<label for="lname">Last name:</label>
-					<input type="text" id="lname" name="lname" placeholder="Last name" required><br><br>
+					<input type="text" id="lname" name="lname" placeholder="Last Name" required><br><br>
 					
 					 <label for="age">Choose your age group:</label>
-						<select name="age" id="age">
+						<select name="age" id="age" onclick="Selectage()">
+							<option value = "blank"> </option>
 							<option value="under11">Under 11</option>
 							<option value="under14">Under 14</option>
 							<option value="under19">Under 19</option>
 							<option value="seniors">Seniors</option>
 						  </select>
 						  <br><br>
+
+					<label>Date of birth</label>
+					<input type="date" id="dtpDate of birth" name="Date of birth"/><br><br>
 						  
-					<label for="school">School:</label>
-					<input type="text" id="school" name="school" placeholder="School Name" required><br><br>
+					<label id= "school1" for="school">School:</label>
+					<input type="text" id="school" name="school" placeholder="School Name" ><br><br>
 					
-					<label for="grade">Grade:</label>
-					<input type="text" id="grade" name="grade" placeholder="Grade" required><br><br>
+					<label id="grade1" for="grade">Grade:</label>
+					<input type="text" id="grade" name="grade" placeholder="Grade" ><br><br>
 					
 					<label for="contact">Contact:</label>
 					<input type="text" id="contact" name="contact" placeholder="Contact" required><br><br>
@@ -98,22 +138,22 @@
 					<label for="idnumber">ID Number:</label>
 					<input type="text" id="idnumber" name="idnumber" placeholder="ID Number" required><br><br>
 					
-					<label for="work">Place of Work:</label>
-					<input type="text" id="work" name="work" placeholder="Place of work" required><br><br>
+					<label id = "work1" for="work">Place of Work:</label>
+					<input type="text" id="work" name="work" placeholder="Optional*"><br><br>
 					
 					<div class="container">
 		<div class = "center">
-        <center>Permission </center><br>
+			<h2>Permission </h2>
 
-			  <input type="checkbox" id="permission" name="permission" value="permission" required>
-			  <label for="permission"> I parent/guardian allow Retreat RFC to train my child </label><br><br>
+			  <input type="checkbox" id="permission" name="permission" value="permission">
+			  <label id= "permission1" for="permission"> I parent/guardian allow Retreat RFC to train my child </label><br><br>
 					
 		<div class="container">
 		<div class = "center">
-        <center>Physical Address</center><br>
+			<h3>Physical Address</h3>
 
-					<label for="building">Building:</label>
-					<input type="text" id="building" name="building" placeholder="Building Name" required><br><br>
+					<label for="address">Address</label>
+					<input type="text" id="address" name="address" placeholder="Address" required><br><br>
 					
 					<label for="street">Street Name:</label>
 					<input type="text" id="street" name="street" placeholder="Street Name" required><br><br>
@@ -130,10 +170,7 @@
 					<label for="province">Province:</label>
 					<input type="text" id="province" name="province" placeholder="Province" required><br><br>
 
-                        <button class="signup">
-                            <span class="btnText">Sign-up</span>
-                            <i class="uil uil-navigator"></i>
-                        </button>
+                        <button class="button1"> Sign-up!</button>
 						<br><br>
 
                     </div>
@@ -149,7 +186,7 @@
 				
 				<div class="footer-contect">
 						<h4>Contact Us:<h4>
-						Address:</br>
+						Address: </br>
 						Email:</br>
 						Cell No:	
 				</div>
