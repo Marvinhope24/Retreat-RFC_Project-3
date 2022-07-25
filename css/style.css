@@ -53,6 +53,7 @@ a:hover{
 
 .footer-contect h3{	
 	text-align: center;	
+
 }
 .footer-social{
 	flex: 6;
@@ -60,11 +61,56 @@ a:hover{
 }
 
 .footer-terms{	
-margin-top: 20px;
+	margin-top: 20px;
 	text-align: center;
+	align-items: center; 
+	justify-content: center;
 }
 
 .socialImg{
 	align-items: center;
 }
+
+.gallery h1{
+	text-align: center;
+	margin: 30px 0 50px;
+	font-size: 3em;
+	font-weight: bolder;
+}
+
+.galleryImg {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;	
+	margin: 30px 0 30px;
+}
+.img1{
+	display: flex;
+	flex-direction: column;
+	width: 32.6%
+}
+
+.galleryImg img{
+	width: 100%;
+	padding-bottom: 15px;
+	border-radius: 7px;
+	filter: grayscale(90%);
+	transition: 0.7s;
+}
+
+.gallery img:hover{
+	filter: grayscale(0);
+}
+
+.button1 {
+	background: purple;
+	color: white;
+	border-radius: 30px;
+	padding: 15px 25px;
+	text-align: center;
+	display: inline-block;
+	font-size: 16px;
+}
+ 
+
 
