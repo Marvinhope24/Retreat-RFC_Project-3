@@ -20,9 +20,7 @@
 		}
 
 		header{
-			background: url(img/trophy2.jpg) no-repeat;
-			background-size: 100% 100%;
-
+			background-color: rgb(189, 180, 180);
 		}
 
 		.ptable table{
@@ -52,43 +50,40 @@
 
 		}
 
-		.wpos{
-			text-align: center;
+		.dropbtn {
+			background-color: #6d0356;
+			color: white;
+			padding: 16px;
+			font-size: 16px;
+			border: none;
 		}
 
-		.wpos td{
-			color: #03080e;
-			font-weight: bold;
+		.dropdown {
+			position: absolute;
+			display: inline-block;
 		}
 
-		.pos{
-			text-align: center;
+		.dropdown-content {
+			display: none;
+			position: absolute;
+			background-color: #f1f1f1;
+			min-width: 160px;
+			box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+			z-index: 1;
 		}
 
-		.pos td{
-			color: #ff7b21;
-			font-weight: bolder;
+		.dropdown-content a {
+			color: black;
+			padding: 12px 16px;
+			text-decoration: none;
+			display: block;
 		}
 
-		table .col{
-			border-bottom: 1px solid #FFFFFF;
-		}
+		.dropdown-content a:hover {background-color: #ddd;}
 
-		.wpos:hover{
-			background-color: #77ff21;
-		}
+		.dropdown:hover .dropdown-content {display: block;}
 
-		.wpos:hover td{
-			color: #000000;
-		}
-
-		.pos:hover{
-			background-color: #ff7b21;
-		}
-
-		.pos:hover td{
-			color: #000000;
-		}
+		.dropdown:hover .dropbtn {background-color: #6d0356;}
 
 	</style>
 </head>
@@ -126,36 +121,187 @@
 	</br>
 	</br>
 	</br>
+
 	<link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet">
 
-	<div class="ptable">
-		<h1 class="headin">RESULTS</h1>
-
-		<table>
-			<tr class="col">
-				<th></th>
-				<th>TEAM A</th>
-				<th>RESULT</th>
-				<th>TEAM B</th>
-			</tr>
-			<tr class="wpos">
-				<td>Saturday, May 7</td>
-				<td>Retreat</td>
-				<td>71-28</td>
-				<td>False Bay</td>
-			</tr>
-
-			<tr class="pos">
-				<td>Saturday, May 14</td>
-				<td>Retreat</td>
-				<td>19-27</td>
-				<td>Hamilton</td>
-			</tr>
-
-		</table>
-
+	<div class="dropdown">
+		<button class="dropbtn"><i>TEAMS</i></button>
+		<div class="dropdown-content">
+			<a href="#">1st Team</a>
+			<a href="#">2nd Team</a>
+		</div>
 	</div>
 
+	<div class="ptable">
+		<h1 class="headin"><i>RESULTS</i></h1>
+		<table>
+			<td>
+				<table class="table1">
+					<tr>
+						<th>Saturday, April 2, 2022, 16:00</th>
+						<th></th>
+					</tr>
+					<tr>
+						<td><i>Retreat 1st Team</i></td>
+						<td>5</td>
+					</tr>
+					<tr>
+						<td>Atlantis 1st Team</td>
+						<td><b><i>15</i></b></td>
+					</tr>
+				</table>
+			</td><br>
+			<td>
+				<table class="table2">
+					<tr>
+						<th>Saturday, April 9, 2022, 16:00</th>
+						<th></th>
+					</tr>
+					<tr>
+						<td>Rocklands 1st Team</td>
+						<td><b><i>40</i></b></td>
+					</tr>
+					<tr>
+						<td>Retreat 1st Team</td>
+						<td>13</td>
+					</tr>
+				</table>
+			</td><br>
+			<td>
+				<table class="table3">
+					<tr>
+						<th>Saturday, May 7, 2022, 16:00</th>
+						<th></th>
+					</tr>
+					<tr>
+						<td>Retreat 1st Team</td>
+						<td>8</td>
+					</tr>
+					<tr>
+						<td>Northerns 1st</td>
+						<td><b><i>24</i></b></td>
+					</tr>
+				</table>
+			</td><br>
+
+
+			<table class="tablelogs">
+				<caption>Tournamemnt Logs</caption>
+				<caption> GROUP A</caption>
+				<tr>
+					<th>Team</th>
+					<th>MP</th>
+					<th>W</th>
+					<th>D</th>
+					<th>L</th>
+					<th>PF</th>
+					<th>PA</th>
+					<th>PD</th>
+					<th>PTS</th>
+				</tr>
+				<tr>
+					<td>Langunya 1st Team</td>
+					<td>8</td>
+					<td>7</td>
+					<td>0</td>
+					<td>1</td>
+					<td>224</td>
+					<td>120</td>
+					<td>104</td>
+					<td>33</td>
+				</tr>
+				<tr>
+					<td>Northerns 1st Team</td>
+					<td>8</td>
+					<td>6</td>
+					<td>1</td>
+					<td>1</td>
+					<td>229</td>
+					<td>74</td>
+					<td>155</td>
+					<td>32</td>
+				</tr>
+				<tr>
+					<td>Atlantis 1st Team</td>
+					<td>8</td>
+					<td>5</td>
+					<td>1</td>
+					<td>2</td>
+					<td>219</td>
+					<td>147</td>
+					<td>72</td>
+					<td>28</td>
+				</tr>
+				<tr>
+					<td>Rocklands 1st Team</td>
+					<td>8</td>
+					<td>5</td>
+					<td>0</td>
+					<td>3</td>
+					<td>233</td>
+					<td>159</td>
+					<td>74</td>
+					<td>26</td>
+				</tr>
+				<tr>
+					<td>Titans 1st</td>
+					<td>8</td>
+					<td>5</td>
+					<td>0</td>
+					<td>3</td>
+					<td>145</td>
+					<td>114</td>
+					<td>31</td>
+					<td>24</td>
+				</tr>
+				<tr>
+					<td>Peninsula 1st</td>
+					<td>8</td>
+					<td>3</td>
+					<td>0</td>
+					<td>5</td>
+					<td>179</td>
+					<td>193</td>
+					<td>-14</td>
+					<td>16</td>
+				</tr>
+				<tr>
+					<td>Young Stars</td>
+					<td>8</td>
+					<td>3</td>
+					<td>0</td>
+					<td>5</td>
+					<td>136</td>
+					<td>204</td>
+					<td>-68</td>
+					<td>15</td>
+				</tr>
+				<tr>
+					<td>Retreat 1st Team</td>
+					<td>8</td>
+					<td>1</td>
+					<td>0</td>
+					<td>7</td>
+					<td>142</td>
+					<td>229</td>
+					<td>-87</td>
+					<td>6</td>
+				</tr>
+				<tr>
+					<td>Thistles 1st</td>
+					<td>8</td>
+					<td>0</td>
+					<td>0</td>
+					<td>8</td>
+					<td>78</td>
+					<td>345</td>
+					<td>-267</td>
+					<td>0</td>
+				</tr>
+			</table>
+			</td><br>
+		</table>
+	</div>
 
 	</br>
 	</br>
